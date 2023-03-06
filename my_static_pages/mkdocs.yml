@@ -1,0 +1,5 @@
+site_name: jakkins.github.io
+
+theme:
+  name: null
+  custom_dir: "../dark_enhanced_dirtree"
