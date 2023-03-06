@@ -108,12 +108,6 @@ code {
   list-style: none;
 }
 
-/* 
-  ul > li > ul {
-    display: none;
-  } 
-*/
-
 .section {
   list-style: none;
   cursor: pointer;
@@ -153,7 +147,12 @@ code {
 }
 
 .nav-page {
-  padding: 2px 0px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.nav-page:hover {
+  background-color: rgba(137, 43, 226, 0.371);
 }
 
 .nav-page a {
