@@ -3,8 +3,10 @@
 ## Priority
 
 - [ ] python release
-- [ ] support link
 - [ ] automatic build and release
 - [ ] show/hide dirtree
 
 # DONE
+
+- [x] keep track of last nav item clicked
+- [x] support to this url format: [internal page](internal/page/)
