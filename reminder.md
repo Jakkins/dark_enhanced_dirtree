@@ -86,6 +86,4 @@ python setup.py bdist_wheel
 
 - https://setuptools.pypa.io/en/latest/userguide/declarative_config.html#using-a-src-layout
 
-## themes example
-
-- https://github.com/chrissimpkins/cinder
+## [Other themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)

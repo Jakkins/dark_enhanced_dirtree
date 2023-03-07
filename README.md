@@ -21,5 +21,3 @@ theme:
 ```bash
 python -m mkdocs serve
 ```
-
-## [Other themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)

@@ -1,5 +1,7 @@
 from setuptools import setup, find_packages
 
+# https://pypi.org/project/mkdocs-dark-minimal-dirtree
+
 VERSION = "0.0.1"
 
 setup(

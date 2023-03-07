@@ -4,6 +4,8 @@
 
 - [ ] python release
 - [ ] automatic build and release
+- [ ] look at how to add plugin / extensions
+  - [ ] markdown_extensions
 - [ ] show/hide dirtree
 
 ## Possible changes
