@@ -147,8 +147,8 @@ code {
 }
 
 .nav-page {
-  list-style: none;
   cursor: pointer;
+  list-style: none;
   padding: 5px;
 }
 

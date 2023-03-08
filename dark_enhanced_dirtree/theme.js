@@ -37,8 +37,8 @@ function setAElements() {
         let last_url_char = url_str[url_str.length - 1];
         if (last_url_char === "/") {
           try {
-            loadPage(url_str);
-            setNavActiveByUrl(url_str);
+            // loadPage(url_str);
+            // setNavActiveByUrl(url_str);
           } catch (e) {
             console.log(e);
           } finally {
@@ -74,15 +74,22 @@ function loadPage(url) {
       content = content.split('<br id="parse-me-away"/>')[0];
       document.getElementById("page_content").innerHTML = content; // update DOM with response
       hljs.highlightAll();
-      setAElements();
+      // setAElements();
     }
   };
   xhr.open("GET", url, true); // open the request with the GET method
   xhr.send(); // send the request
 }
 
+/**
+ * LOAD - after images and css
+ */
 window.addEventListener("load", function (event) {
-  setAElements();
+  this.document.getElementById("page_content").style.display = "none";
+  hljs.highlightAll();
+  setNavActiveByUrl(window.location.href);
+  this.document.getElementById("page_content").style.display = "block";
+  // setAElements();
   /**
    * dirtree functionality === css + js
    */
@@ -105,11 +112,17 @@ window.addEventListener("load", function (event) {
     pages_nodelist[i].addEventListener(
       "click",
       function (event) {
-        setActive(event.target);
+        // setActive(event.target);
         let a_el_page = event.target.firstElementChild; // HTMLAnchorElement
-        loadPage(a_el_page.pathname);
+        a_el_page.click();
+        // loadPage(a_el_page.pathname);
       },
       false
     );
   }
 });
+
+/**
+ * DOMContentLoaded - before css
+ */
+document.addEventListener("DOMContentLoaded", (event) => {});

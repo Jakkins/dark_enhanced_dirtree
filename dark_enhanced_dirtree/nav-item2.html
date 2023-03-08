@@ -1,7 +1,6 @@
 {% if nav_item.is_page %}
 <li class="nav-page">
-	<!-- <a href="{{ base_url }}/{{ nav_item.url }}">{{ nav_item.title }}</a> -->
-	<a href="{{ base_url }}/{{ nav_item.url }}">{{ nav_item.title }}</a>
+	<a class="noselect" href="{{ base_url }}/{{ nav_item.url }}">{{ nav_item.title }}</a>
 </li>
 {% endif %}
 
@@ -11,7 +10,6 @@
 </li>
 {% endif %}
 
-<!-- if nav_item has children -->
 {%- if nav_item.children %}
 <li class="children">
 	<ul>
