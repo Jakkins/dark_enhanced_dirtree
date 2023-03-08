@@ -1,0 +1,40 @@
+#!/bin/bash
+
+print_help () {
+    echo args supported:
+    echo   - goprod
+    echo   - serve
+    echo
+    echo example: site serve
+}
+
+if [ $# -eq 0 ]; then
+    print_help
+    exit 1
+fi
+
+ABSPATH="$(cd -- "$(dirname "$0")" >/dev/null 2>&1; pwd -P)"
+
+if [ "$1" = "serve" ]; then
+    cd $ABSPATH
+    python -m mkdocs serve
+fi
+
+static_page_repo=jakkins.github.io
+
+if [ "$1" = "goprod" ]; then
+    cd $ABSPATH
+    python -m mkdocs build
+    cd ../../$static_page_repo
+    # delete everything but readme.md and .git folder
+    find . ! -name .git ! -name readme.md -maxdepth 1 -print0 | xargs -0 -I {} rm -rf {}
+    rm -r !./readme.md !./.git
+    cd $ABSPATH
+    mv ./site/* ../../$static_page_repo/
+    cd ../../$static_page_repo
+    git add .
+    git commit -m "goprod.sh"
+    git push origin main
+fi
+
+
