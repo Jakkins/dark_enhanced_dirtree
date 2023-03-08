@@ -2,3 +2,4 @@ dist/
 build/
 dark_enhanced_dirtree.egg-info
 mkdocs_dark_enhanced_dirtree.egg-info
+site/

@@ -4,8 +4,8 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<!--this is not working-->
 	{% for path in config.extra_css %}
+	<!--this is not working-->
 	<link href="{{ path|url }}" rel="stylesheet" />
 	{% endfor %}
 
