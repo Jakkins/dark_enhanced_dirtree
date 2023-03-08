@@ -5,14 +5,14 @@
 {% endif %}
 
 {% if nav_item.is_section %}
-<li id="section" class="section noselect collapsed">
+<li id="section" class="section noselect">
 	<span>{{ nav_item.title }}</span>
 </li>
 {% endif %}
 
 {%- if nav_item.children %}
 <li class="children">
-	<ul>
+	<ul class="sub-nav">
 		{%- set navlevel = navlevel + 1 %}
 		{%- for nav_item in nav_item.children %}
 		{% include 'nav-item2.html' %}

@@ -74,7 +74,7 @@ blockquote p strong em {
 }
 
 ul {
-  margin-left: 40px;
+  padding-left: 8px;
 }
 
 /* ------------------------------------ */
@@ -120,21 +120,21 @@ code {
 }
 
 .section::before {
-  content: "-";
+  content: "+";
 }
 
 .section.collapsed::before {
-  content: "+";
+  content: "-";
 }
 
 /* hide the items */
 .section.collapsed + .children {
-  display: none;
+  display: block;
 }
 
-/* show the items */
+/* hide the items */
 .section + .children {
-  display: block;
+  display: none;
 }
 
 .noselect {

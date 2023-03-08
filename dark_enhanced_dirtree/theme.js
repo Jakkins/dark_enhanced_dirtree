@@ -6,28 +6,6 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-let last_active_nav_el = null;
-
-async function setNavActiveByUrl(url) {
-  let li_nodelist = this.document.getElementsByClassName("nav-page");
-  for (var i = 0, len = li_nodelist.length; i < len; i++) {
-    let a_el = li_nodelist[i].getElementsByTagName("a")[0]; // get a inside li
-    if (a_el.href === url) {
-      setActive(li_nodelist[i]);
-      const li_children = li_nodelist[i].closest("li.children");
-      let li_section = li_children.previousElementSibling;
-      while (li_section) {
-        if (li_section.classList.contains("section")) {
-          li_section.classList.remove("collapsed");
-          let li_children = li_section.closest("li.children");
-          li_section =
-            li_children !== null ? li_children.previousElementSibling : null;
-        }
-      }
-    }
-  }
-}
-
 function setAElements() {
   let all_a_el = document.getElementsByTagName("a");
   for (var i = 0, len = all_a_el.length; i < len; i++) {
@@ -54,14 +32,6 @@ function setAElements() {
   }
 }
 
-function setActive(target) {
-  if (last_active_nav_el !== null) {
-    last_active_nav_el.classList.toggle("active");
-  }
-  target.classList.toggle("active");
-  last_active_nav_el = target;
-}
-
 function loadPage(url) {
   let page_content = document.getElementById("page_content");
   page_content.innerHTML = "";
@@ -84,43 +54,7 @@ function loadPage(url) {
 /**
  * LOAD - after images and css
  */
-window.addEventListener("load", function (event) {
-  this.document.getElementById("page_content").style.display = "none";
-  hljs.highlightAll();
-  setNavActiveByUrl(window.location.href);
-  this.document.getElementById("page_content").style.display = "block";
-  // setAElements();
-  /**
-   * dirtree functionality === css + js
-   */
-  let sections_nodelist = this.document.getElementsByClassName("section");
-  for (var i = 0, len = sections_nodelist.length; i < len; i++) {
-    sections_nodelist[i].addEventListener(
-      "click",
-      function (event) {
-        event.target.classList.toggle("collapsed");
-      },
-      false
-    );
-  }
-
-  /**
-   * change page without refresh functionality
-   */
-  let pages_nodelist = this.document.getElementsByClassName("nav-page");
-  for (var i = 0, len = pages_nodelist.length; i < len; i++) {
-    pages_nodelist[i].addEventListener(
-      "click",
-      function (event) {
-        // setActive(event.target);
-        let a_el_page = event.target.firstElementChild; // HTMLAnchorElement
-        a_el_page.click();
-        // loadPage(a_el_page.pathname);
-      },
-      false
-    );
-  }
-});
+window.addEventListener("load", function (event) {});
 
 /**
  * DOMContentLoaded - before css
