@@ -46,16 +46,18 @@ async function setNavActiveByUrl() {
     if (a_el.href === window.location.href) {
       setActive(li_mdpages_nodelist[i]);
       const li_children = li_mdpages_nodelist[i].closest("li.children");
-      let li_section = li_children.previousElementSibling;
-      while (li_section) {
-        if (li_section.classList.contains("section")) {
-          li_section.classList.add("collapsed");
-          let li_children = li_section.closest("li.children");
-          li_section =
-            li_children !== null ? li_children.previousElementSibling : null;
-          if (li_section !== null) {
-            const sub_nav_node = li_section.closest("ul.sub-nav");
-            if (sub_nav_node !== null) setNavBorder(sub_nav_node);
+      if (li_children) {
+        let li_section = li_children.previousElementSibling;
+        while (li_section) {
+          if (li_section.classList.contains("section")) {
+            li_section.classList.add("collapsed");
+            let li_children = li_section.closest("li.children");
+            li_section =
+              li_children !== null ? li_children.previousElementSibling : null;
+            if (li_section !== null) {
+              const sub_nav_node = li_section.closest("ul.sub-nav");
+              if (sub_nav_node !== null) setNavBorder(sub_nav_node);
+            }
           }
         }
       }
