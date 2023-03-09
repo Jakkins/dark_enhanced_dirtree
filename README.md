@@ -1,6 +1,15 @@
 # dark_enhanced_dirtree
 
-## installation
+## install mkdocs
+
+```bash
+python -m pip install mkdocs
+
+# to upgrade
+python -m pip install --upgrade mkdocs
+```
+
+## install theme
 
 ```bash
 pip install mkdocs-dark-enhanced-dirtree

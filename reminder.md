@@ -41,11 +41,18 @@ pip install ./dist/mkdocs-dark_minimal_dirtree-0.0.1.tar.gz
 ```python
 # python setup.py register    deprecated
 
+# python -m pip install --proxy http://<usr_name>:<password>@<proxyserver_name>:<port#> mkdocs-foo-plugin
 # python -m pip install twine --user
 python -m pip install twine
 
 # python setup.py sdist bdist_wheel
 python setup.py sdist
+
+# to install local
+# python -m pip install my-tarball-file-name.tar.gz
+# python -m pip install .\dist\mkdocs-fastsearch-0.1.0.tar.gz
+
+# to upload in https://pypi.org/
 python -m twine upload dist/*
 ```
 
@@ -86,4 +93,8 @@ python setup.py bdist_wheel
 
 - https://setuptools.pypa.io/en/latest/userguide/declarative_config.html#using-a-src-layout
 
-## [Other themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
+# Sources
+
+- [Other themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
+
+- [Plugins](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins)
