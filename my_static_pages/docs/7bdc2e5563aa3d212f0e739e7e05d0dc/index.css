@@ -11,8 +11,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 p {
-  font-size: 3.2vw;
+  font-size: 6vw;
 }
