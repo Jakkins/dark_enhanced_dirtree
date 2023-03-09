@@ -27,7 +27,7 @@ if [ "$1" = "goprod" ]; then
     python -m mkdocs build
     cd ../../$static_page_repo
     # delete everything but readme.md and .git folder
-    find . ! -name .git ! -name readme.md -maxdepth 1 -print0 | xargs -0 -I {} rm -rf {}
+    find . -maxdepth 1 ! -name .git ! -name readme.md  -print0 | xargs -0 -I {} rm -rf {}
     rm -r !./readme.md !./.git
     cd $ABSPATH
     mv ./site/* ../../$static_page_repo/
