@@ -1,7 +1,3 @@
-(function () {
-  console.log("every page loaddd");
-})();
-
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -60,3 +56,12 @@ window.addEventListener("load", function (event) {});
  * DOMContentLoaded - before css
  */
 document.addEventListener("DOMContentLoaded", (event) => {});
+
+/**
+ * ====================================
+ * ====================================
+ * ====================================
+ */
+(function () {
+  console.log("ready");
+});

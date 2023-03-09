@@ -19,12 +19,10 @@ const colors = [
 function getRandomFromColors() {
   colors_autoincrement_index = colors_autoincrement_index + 1;
   let index = colors_autoincrement_index % colors.length;
-  console.log(index);
   return colors[index];
 }
 
 function setNavBorder(sub_nav_node) {
-  console.log(sub_nav_node);
   const li_children = sub_nav_node.closest("li.children");
   const li_section = li_children.previousElementSibling;
   if (li_section.classList.contains("collapsed")) {

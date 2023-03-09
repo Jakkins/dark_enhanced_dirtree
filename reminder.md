@@ -24,7 +24,7 @@ pip list
 pip uninstall mkdocs-dark-minimal-dirtree
 ```
 
-### debug job
+### debug job & how to install
 
 ```diff
 - setup.py install is deprecated. Use build and pip and other standards-based tools.
@@ -47,10 +47,6 @@ python -m pip install twine
 
 # python setup.py sdist bdist_wheel
 python setup.py sdist
-
-# to install local
-# python -m pip install my-tarball-file-name.tar.gz
-# python -m pip install .\dist\mkdocs-fastsearch-0.1.0.tar.gz
 
 # to upload in https://pypi.org/
 python -m twine upload dist/*
@@ -98,3 +94,5 @@ python setup.py bdist_wheel
 - [Other themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
 
 - [Plugins](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins)
+
+- [PyPi - Python Packages](https://pypi.org/)

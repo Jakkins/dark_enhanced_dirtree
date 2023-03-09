@@ -1,5 +1,6 @@
 {%- block site_nav %}
 <nav>
+	{% if 'search' in config['plugins'] %}{%- include "search-modal.html" %}{% endif %}
 	<ul class="nav">
 		{%- set navlevel = 1 %}
 		{%- for nav_item in nav %}
