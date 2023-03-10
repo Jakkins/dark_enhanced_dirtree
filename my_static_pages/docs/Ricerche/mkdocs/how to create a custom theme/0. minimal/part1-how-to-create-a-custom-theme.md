@@ -92,6 +92,10 @@ extra_css:
 </html>
 ```
 
+### Example until now
+
+![mkdocs-theme-init](mkdocs-theme-init.png)
+
 ### better index.css
 
 ```css
@@ -182,10 +186,10 @@ code {
 > **_NOTES:_**
 > use two tabs for indent the list.
 
-- https://highlightjs.org/download/
-  - download
-  - change the default.css file
-- https://squidfunk.github.io/mkdocs-material/getting-started/
+- <https://highlightjs.org/download/>
+    - download
+    - change the default.css file
+- <https://squidfunk.github.io/mkdocs-material/getting-started/>
 
 ## highlightjs.js
 

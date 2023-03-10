@@ -98,22 +98,22 @@ section : the directory name inside docs dir
 ```
 
 > The order is by filename and not by title!
-> 
+>
 > This is good because you can name every file like:
-> 
+>
 > - 000.md
-> 
+>
 > - 001.md
-> 
+>
 > But you can always change title as you want:
-> 
+>
 > - 000.md
-> 
+>
 >     - Home
-> 
+>
 > - 0001.md
-> 
->     - part1 
+>
+>     - part1
 
 ## Example
 
@@ -168,4 +168,3 @@ docs
 ```
 
 > Only directories with md file inside are taken into consideration.
-

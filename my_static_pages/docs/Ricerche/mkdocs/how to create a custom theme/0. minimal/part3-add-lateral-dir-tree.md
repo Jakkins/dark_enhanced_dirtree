@@ -49,7 +49,7 @@ At this point we have this `main.html` file:
 Now, I want to add a dynamic lateral navigation system that adapt to all files and directories inside docs folder.
 And I have to do this using what mkdocs offers me.
 
-### Randomly adjust some css of course and some other trick... of course...
+### Randomly adjust some css of course and some other trick... of course
 
 ```css
 code,
@@ -158,4 +158,3 @@ Ok... So...
 > MkDocs uses Jinja2 as its default templating engine.
 
 It wasn't written like that .-.
-

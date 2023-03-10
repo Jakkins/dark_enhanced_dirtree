@@ -13,7 +13,7 @@ VSCode si installa come qualsiasi altro programma, non dovrebbe essere difficile
 
 Per installare l'estensione invece andare qui:
 
-![vscode-extension](../../../resources/images/vscode-extensions.png)
+![vscode-extension](./vscode-extensions.png)
 
 ## Come continuare
 

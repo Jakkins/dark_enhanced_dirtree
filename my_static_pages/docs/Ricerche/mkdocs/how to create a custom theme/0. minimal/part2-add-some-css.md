@@ -179,13 +179,13 @@ code {
 
 ### Possibilities
 
-> ***NOTES:***
+> **_NOTES:_**
 > use two tabs for indent the list.
 
-- https://highlightjs.org/download/
+- <https://highlightjs.org/download/>
     - download
     - change the default.css file
-- https://squidfunk.github.io/mkdocs-material/getting-started/
+- <https://squidfunk.github.io/mkdocs-material/getting-started/>
 
 ## highlightjs.js
 
@@ -352,4 +352,3 @@ code.hljs {
   font-weight: 700;
 }
 ```
-
