@@ -37,6 +37,7 @@ body {
     /* if this min-width is black magic, read this: */
     /* https://stackoverflow.com/questions/36230944/prevent-flex-items-from-overflowing-a-container */
     min-width: 0;
+    width: 100%;
   }
 }
 
