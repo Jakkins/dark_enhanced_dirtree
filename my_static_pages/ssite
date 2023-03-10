@@ -28,7 +28,6 @@ if [ "$1" = "goprod" ]; then
     cd ../../$static_page_repo
     # delete everything but readme.md and .git folder
     find . -maxdepth 1 ! -name .git ! -name readme.md  -print0 | xargs -0 -I {} rm -rf {}
-    rm -r !./readme.md !./.git
     cd $ABSPATH
     mv ./site/* ../../$static_page_repo/
     cd ../../$static_page_repo
