@@ -29,6 +29,7 @@ if sys.argv[1] == "goprod":
     os.chdir(ABSPATH)
     os.system("python -m mkdocs build")
     os.chdir(f"../../{static_page_repo}")
+    # delete all files and directories inside your "static_page_repo" excluding .git and readme.md
     files = glob("*")
     for file in files:
         if file not in [".git", "readme.md"]:
