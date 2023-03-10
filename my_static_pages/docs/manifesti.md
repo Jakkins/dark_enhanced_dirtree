@@ -12,3 +12,8 @@
 ## Ravers
 
 - [WorldWide Raver's Manifesto Project, Toronto](http://www.ecstasy.org/experiences/trip98.html)
+
+## Awesome
+
+- [Awesome manifesto](https://github.com/sindresorhus/awesome/blob/main/awesome.md)
+    - [index](https://github.com/sindresorhus/awesome)
