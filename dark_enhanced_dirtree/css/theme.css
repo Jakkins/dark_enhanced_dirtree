@@ -62,7 +62,7 @@ h6 {
 
 blockquote {
   padding: 10px;
-  margin: 10px;
+  margin: 0px auto;
   background-color: rgb(0, 41, 82);
 }
 

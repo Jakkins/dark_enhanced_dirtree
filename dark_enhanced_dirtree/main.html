@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    {% for path in config.extra_css %}
-    <!--this is not working-->
-    <link href="{{ path|url }}" rel="stylesheet" />
-    {% endfor %}
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script>
-      // have to put this to make search plugin works
-      let base_url = ""
-    </script>
+	{% for path in config.extra_css %}
+	<!--this is not working-->
+	<link href="{{ path|url }}" rel="stylesheet" />
+	{% endfor %}
 
-    <!---->
-    <link
-      rel="stylesheet"
-      href="{{ base_url }}/highlight/styles/default.min.css"
-    />
-    <link rel="stylesheet" href="{{ base_url }}/css/theme.css" />
-    <link rel="stylesheet" href="{{ base_url }}/css/search.css" />
-    <script src="/highlight/highlight.min.js"></script>
-    <script src="/js/theme.js"></script>
-    <script src="/js/nav.js"></script>
-    {% if 'search' in config['plugins'] %}
-    <script src="/search/main.js"></script>
-    {% endif %}
+	<script>
+		// have to put this to make search plugin works
+		let base_url = ""
+	</script>
 
-    <title>
-      {% if page.title %}{{ page.title }}{% endif %}
-    </title>
-  </head>
+	<!---->
+	<link rel="stylesheet" href="{{ base_url }}/highlight/styles/default.min.css" />
+	<link rel="stylesheet" href="{{ base_url }}/css/theme.css" />
+	<link rel="stylesheet" href="{{ base_url }}/css/search.css" />
+	<script src="/highlight/highlight.min.js"></script>
+	<script src="/js/theme.js"></script>
+	<script src="/js/nav.js"></script>
+	{% if 'search' in config['plugins'] %}
+	<script src="/search/main.js"></script>
+	{% endif %}
 
-  <body>
-    {% include 'nav.html' %} {% include 'index.html' %}
-  </body>
+	<title>
+		{% if page.title %}{{ page.title }}{% endif %}
+	</title>
+</head>
+
+<body>
+	{% include 'html/nav.html' %} {% include 'html/index.html' %}
+</body>
 
 </html>

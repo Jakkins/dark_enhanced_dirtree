@@ -15,7 +15,7 @@
 	<ul class="sub-nav">
 		{%- set navlevel = navlevel + 1 %}
 		{%- for nav_item in nav_item.children %}
-		{% include 'nav-item2.html' %}
+		{% include 'html/nav-item2.html' %}
 		{%- endfor %}
 		{%- set navlevel = navlevel - 1 %}
 	</ul>
