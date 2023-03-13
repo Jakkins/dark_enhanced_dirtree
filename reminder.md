@@ -6,7 +6,19 @@
 git config --local user.name "Jakkins"
 git config --local user.email "sjakkins@proton.me"
 git config --local --list
+git config --local http.proxy http://host:port
+git config --local https.proxy http://host:port
+git config --local --unset http.proxy
+git config --local --unset https.proxy
 ```
+
+# util links
+
+- [Other themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
+
+- [Plugins](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins)
+
+- [PyPi - Python Packages](https://pypi.org/)
 
 # mkdocs
 
@@ -88,11 +100,3 @@ python setup.py bdist_wheel
 ## "Package would be ignored" error with dir inside the theme
 
 - https://setuptools.pypa.io/en/latest/userguide/declarative_config.html#using-a-src-layout
-
-# Sources
-
-- [Other themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
-
-- [Plugins](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins)
-
-- [PyPi - Python Packages](https://pypi.org/)
