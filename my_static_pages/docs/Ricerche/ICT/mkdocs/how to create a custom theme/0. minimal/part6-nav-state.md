@@ -65,3 +65,5 @@ window.addEventListener("load", function (event) {
 > Am I going to find another solution? no.
 >
 > ***THE END***
+
+P.S. I did find a better solution :3

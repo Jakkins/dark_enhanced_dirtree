@@ -5,12 +5,12 @@
 ```txt
 mkdocs.yml
 docs/
-    index.md
-    about.md
+  index.md
+  about.md
 custom_theme/
-    main.html
-		css
-			index.css
+  main.html
+  css
+   index.css
 ```
 
 ## mkdocs.yml
