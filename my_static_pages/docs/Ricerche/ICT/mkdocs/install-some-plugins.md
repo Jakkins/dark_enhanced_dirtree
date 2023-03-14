@@ -61,3 +61,9 @@ Add this:
 ```html
 <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
 ```
+
+# mermaid sources
+
+- github.com/fralau/mkdocs-mermaid2-plugin
+- mermaid.js.org/ecosystem/integrations.html#document-generation
+- cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
