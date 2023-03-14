@@ -33,7 +33,7 @@ rsync -v -progress -a ./dir1/ ./dir2
 
 Unico problema, questo comando non cancella i file, ovvero non fa un perfetto mirror della cartella sorgente, ovvero:
 
-- se se di1 ci sono 2 file (file1, file2)
+- se su dir1 ci sono 2 file (file1, file2)
 - e su dir 2 ci sono 3 file (file1, file3, file4)
 
 Un perfetto mirror sarebbe quello di cancellare file3 e file4 e salvare il file2 in modo da avere entrambe le cartelle che contengono gli stessi file.
@@ -46,7 +46,9 @@ rsync -v -progress -a --delete ./dir1/ ./dir2
 # --delete       questo comando cancella i file nella dir2 che non sono presenti nella dir1
 ```
 
-## Il comando sopra può essere scritto anche in questo modo
+## Shortcut
+
+Il comando sopra può essere scritto anche in questo modo:
 
 ```bash
 rsync -vPa --delete ./dir1/ ./dir2     
