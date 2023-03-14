@@ -35,4 +35,8 @@
 	{% include 'html/nav.html' %} {% include 'html/index.html' %}
 </body>
 
+{% if 'mermaid2' in config['plugins'] %}
+<script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
+{% endif %}
+
 </html>

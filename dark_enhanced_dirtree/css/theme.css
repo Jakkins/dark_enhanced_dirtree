@@ -173,3 +173,19 @@ code {
   text-decoration: none;
   pointer-events: none;
 }
+
+/* ----------------------------------- */
+/* ============ MERMEID2 ============= */
+/* ----------------------------------- */
+
+g div {
+  color: black;
+}
+
+.edgePath .path {
+  stroke: rgb(170, 255, 255) !important;
+}
+
+.arrowheadPath {
+  fill: rgb(170, 255, 255) !important;
+}

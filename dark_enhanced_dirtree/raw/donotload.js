@@ -72,3 +72,17 @@ document.addEventListener("DOMContentLoaded", (event) => {});
   <script src="{{ 'js/bootstrap.js'|url }}"></script>
   {%- endblock %}
 */
+
+// =============================================================
+
+{% if 'mermaid2' in config['plugins'] %}
+<script>
+	window.addEventListener("load", async function (event) {
+		mermaid.initialize({
+			theme: "dark"
+		});
+	});
+</script>
+{% endif %}
+
+// =============================================================
