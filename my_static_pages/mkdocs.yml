@@ -7,4 +7,10 @@ theme:
 plugins:
   - search:
       min_search_length: 1
+  - mermaid2:
+      arguments:
+        theme: "neutral"
+        startOnLoad: true
 
+extra_javascript:
+  - https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js
