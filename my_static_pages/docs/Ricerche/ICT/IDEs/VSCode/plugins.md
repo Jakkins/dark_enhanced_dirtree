@@ -1,12 +1,12 @@
 # VSCode plugins
 
 - [VSCode plugins](#vscode-plugins)
-  - [Markdown Extension Pack](#markdown-extension-pack)
-    - [Setup the plugin named "markdownlint" that is inside this extension pack](#setup-the-plugin-named-markdownlint-that-is-inside-this-extension-pack)
-    - [Setup format on save functionality](#setup-format-on-save-functionality)
-    - [Setup the plugin "Markdown Theme Kit" inside this extension pack](#setup-the-plugin-markdown-theme-kit-inside-this-extension-pack)
-    - [Markdown All in One](#markdown-all-in-one)
-      - [create a table of contents with this plugin](#create-a-table-of-contents-with-this-plugin)
+    - [Markdown Extension Pack](#markdown-extension-pack)
+        - [Setup the plugin named "markdownlint" that is inside this extension pack](#setup-the-plugin-named-markdownlint-that-is-inside-this-extension-pack)
+        - [Setup format on save functionality](#setup-format-on-save-functionality)
+        - [Setup the plugin "Markdown Theme Kit" inside this extension pack](#setup-the-plugin-markdown-theme-kit-inside-this-extension-pack)
+        - [Markdown All in One](#markdown-all-in-one)
+            - [create a table of contents with this plugin](#create-a-table-of-contents-with-this-plugin)
 
 ## [Markdown Extension Pack](vscode:extension/sugatoray.vscode-markdown-extension-pack)
 
@@ -23,7 +23,10 @@
     "no-hard-tabs": false,
     "no-inline-html": false,
     "single-h1": false,
-    "no-bare-urls": false
+    "no-bare-urls": false,
+		"ul-indent": {
+      "indent": 4
+    }
 }
 ```
 
