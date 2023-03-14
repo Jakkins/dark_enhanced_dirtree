@@ -50,7 +50,6 @@ if sys.argv[1] == "goprod":
             src_path = os.path.join(dirpath, filename)
             dst_path = src_path.replace(src_dir, dst_dir, 1)
             shutil.move(src_path, dst_path)
-    os.system("git pull origin main")
     os.system("git add .")
     os.system('git commit -m "goprod"')
-    os.system("git push origin main")
+    os.system("git push origin main --force")
