@@ -1,0 +1,69 @@
+<div id="player"></div>
+
+<iframe id="videoplayer" width="560" height="315" src="https://www.youtube-nocookie.com/embed/-cpIp5YYTmM"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+
+<script src="http://www.youtube.com/player_api"></script>
+
+<script>
+    /**
+     * https://developers.google.com/youtube/iframe_api_reference
+     * https://stackoverflow.com/questions/26036441/hide-iframe-when-youtube-video-ends
+     * https://developers.google.com/youtube/iframe_api_reference#Events
+     */
+
+    // create youtube player
+    var player;
+    function onYouTubePlayerAPIReady() {
+        player = new YT.Player('player', {
+            width: '640',
+            height: '390',
+            videoId: '-cpIp5YYTmM',
+            events: {
+                onReady: onPlayerReady,
+                onStateChange: onPlayerStateChange
+            }
+        });
+    }
+
+    // autoplay video
+    function onPlayerReady(event) {
+        event.target.setVolume(100);
+        event.target.playVideo();
+    }
+
+    // when video ends
+    function onPlayerStateChange(event) {
+        if (event.data === 0) {
+            alert('done');
+        }
+    }
+
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    var done = false;
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+            setTimeout(stopVideo, 6000);
+            done = true;
+        }
+    }
+
+    function stopVideo() {
+        player.stopVideo();
+    }
+</script>
+<!-- ------------------------------------------- -->
+
+/*var myvideo = document.getElementById('videoplayer');
+console.log(myvideo);
+myvideo.src = "https://www.youtube-nocookie.com/embed/-cpIp5YYTmM"
+myvideo.width= "560";
+myvideo.height= "315";
+myvideo.addEventListener('ended',function() {
+// The video's callback
+console.log("Video ended");
+} ,false);*/

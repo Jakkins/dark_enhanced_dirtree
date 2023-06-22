@@ -1,0 +1,20 @@
+# TODO
+
+- [ ] python release
+- [ ] automatic build and release
+- [ ] look at how to add plugin / extensions
+  - [ ] markdown_extensions
+- [ ] show/hide dirtree
+
+## Possible ideas / changes
+
+- other methods to keep the nav open/close state without refresh the page, or with page refresh
+  - example: ad each refresh a script runs to open the nav from the page using actual path (I already have this script). At the moment the refresh is bypassed.
+- change path without refresh the page
+- can I use <object data="framed.html" type="text/html"><p>This is the fallback code!</p></object> tag in some way?
+- iframe can be refreshed without redirecting parent page
+
+# DONE
+
+- [x] keep track of last nav item clicked
+- [x] support to this url format: [internal page](internal/page/)

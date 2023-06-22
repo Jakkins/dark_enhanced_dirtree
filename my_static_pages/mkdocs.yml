@@ -1,0 +1,16 @@
+site_name: jakkins.github.io
+
+theme:
+  name: null
+  custom_dir: "../dark_enhanced_dirtree"
+
+plugins:
+  - search:
+      min_search_length: 1
+  - mermaid2:
+      arguments:
+        theme: "forest"
+        startOnLoad: true
+
+extra_javascript:
+  - https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js
