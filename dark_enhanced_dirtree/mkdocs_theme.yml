@@ -1,0 +1,8 @@
+language: en
+direction: ltr
+features: []
+font:
+  text: Roboto
+  code: Roboto Mono
+static_templates:
+  - 404.html
